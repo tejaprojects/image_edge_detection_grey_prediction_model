@@ -1,1 +1,13 @@
 Image Edge Detection Algorithm using Grey Prediction Model
+
+Grey Prediction Model is a time series prediction methodology. This algorithm makes use of the characteristics of a prediction strategy, i.e., the error is more if the difference between the prediction and the actual value is high.
+
+This model is applied to images in the following way:
+	1. Given an image, a window of particular size is considered for every pixel.
+	2. We consider all the pixels except the center pixel and form a vector. This is analogous to a time series.
+	3. Using these pixels, the center pixel is predicted.
+	4. Since the prediction is usually similar to the background pixels, if the center pixel belongs to edge, the difference between the prediction and the actual center pixel value is more.
+	5. Later on, thresholding gives the edges detected in the given image.
+
+REFERENCES
+	1. Qiuping Wang, Tiepeng Wang, Ke Zhang, (2012) "Image edge detection based on the grey prediction model and discrete wavelet transform", Kybernetes, Vol. 41 Issue: 5/6, pp.643-654, doi: 10.1108/03684921211243301
